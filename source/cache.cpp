@@ -69,6 +69,9 @@ namespace coolnamespace
                 listsize_[Q_MAIN] = main_size;
             }
 
+            // Destructor, but why...
+            ~Cache2Q () {};
+
             /**
              * get page from cache or slowly load it
              * @param page address of page we want to get
