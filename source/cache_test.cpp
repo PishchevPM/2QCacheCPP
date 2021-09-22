@@ -16,7 +16,7 @@ int main()
     unsigned long npages;
     int tmp;
     cin >> sz >> npages;
-    Cache2Q<int> cache((sz + 1)/ 4, sz / 2, (sz + 3)/ 4);
+    Cache2Q<int> cache((sz + 3)/ 4, sz / 2, (sz + 1)/ 4);
 
     for (unsigned long i = 0; i < npages; i++)
     {
