@@ -1,4 +1,0 @@
-Number of pages: 6, hits: 3, hitrate: 50%
-
-// comment: 50% instead of 66.6% because max size of main queue is zero, 
-// this causes 1 to be displaced out of the cache when it is found in the output queue

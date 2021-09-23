@@ -5,6 +5,9 @@ OBJECTS = $(BASEOBJECTS) cache_test.o cache_test
 
 all: cache_test
 
+run:
+	for i in testdata/*.dat; do echo $$(basename $$i); ./cache_test < $$i; done;
+
 cache.o: source/cache.cpp
 	$(CC) $(CFLAGS) source/cache.cpp -c -o cache.o
 

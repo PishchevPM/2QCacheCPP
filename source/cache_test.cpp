@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-using namespace coolnamespace;
+using namespace ppmipt;
 
 int loadfakedata (int page)
 {
