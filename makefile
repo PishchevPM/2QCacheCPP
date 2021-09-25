@@ -1,6 +1,5 @@
 CC = g++
-CFLAGS = -g -O2 -Wall -I include
-BASEOBJECTS = cache.o
+CFLAGS = -std=c++11 -g -O2 -Wall -I include
 OBJECTS = $(BASEOBJECTS) cache_test.o cache_test
 
 all: cache_test
@@ -8,14 +7,8 @@ all: cache_test
 run:
 	for i in testdata/*.dat; do echo $$(basename $$i); ./cache_test < $$i; done;
 
-cache.o: source/cache.cpp
-	$(CC) $(CFLAGS) source/cache.cpp -c -o cache.o
-
-cache_test.o: source/cache_test.cpp
-	$(CC) $(CFLAGS) source/cache_test.cpp -c -o cache_test.o
-
-cache_test: $(BASEOBJECTS) cache_test.o
-	$(CC) $(CFLAGS) $(BASEOBJECTS) cache_test.o -o cache_test
+cache_test: source/cache_test.cpp
+	$(CC) $(CFLAGS) source/cache_test.cpp -o cache_test
 
 clean:
 	rm -r -f $(OBJECTS)
