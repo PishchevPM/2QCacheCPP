@@ -1,4 +1,4 @@
-#include "cache.cpp"
+#include "cache.h"
 #include <iostream>
 
 using namespace std;
@@ -24,5 +24,5 @@ int main()
         cache.get_page(tmp, loadfakedata, &counter);
     }
 
-    cout << "Number of pages: " << npages << ", hits: " << counter << ", hitrate: " << (double) 100 * counter / npages << "\%" << endl;
+    cout << counter << endl;
 }
